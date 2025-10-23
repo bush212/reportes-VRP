@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_3b73d03de416f7ffb58c911154c72ea0 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-textpath@1.2.3/leaflet.textpath.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_3b73d03de416f7ffb58c911154c72ea0" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_3b73d03de416f7ffb58c911154c72ea0 = L.map(
+                "map_3b73d03de416f7ffb58c911154c72ea0",
+                {
+                    center: [-33.55, -70.65],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_b34a8ee967643cc1017b82c0f5c0d90c = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_b34a8ee967643cc1017b82c0f5c0d90c.addTo(map_3b73d03de416f7ffb58c911154c72ea0);
+        
+    
+            var tile_layer_4e8eae304aeb88a6eed55f63e7fd0497 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "OpenStreetMap",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_4e8eae304aeb88a6eed55f63e7fd0497.addTo(map_3b73d03de416f7ffb58c911154c72ea0);
+        
+    
+            var feature_group_f37784d819a7f968bfdd1ab4a0511f5e = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_a639fd5d39993271d4878f2e7b286703 = L.marker(
+                [-33.526893429154455, -70.59725352434049],
+                {
+}
+            ).addTo(feature_group_f37784d819a7f968bfdd1ab4a0511f5e);
+        
+    
+            var div_icon_3c398b2f50dc6a18f962d2c89f58bba3 = L.divIcon({
+  "html": "\u003cdiv style=\"background-color:#e74c3c;width:25px;height:25px;border-radius:50%;border:3px solid white;box-shadow:0 2px 5px rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center;color:white;font-weight:bold;font-size:12px;\"\u003eM\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_8990df33d8bb021e93f227837157834f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c4882df01a9112eee37185e2ffcc00e2 = $(`<div id="html_c4882df01a9112eee37185e2ffcc00e2" style="width: 100.0%; height: 100.0%;"><div style='font-family: Arial'><h3 style='color:#e74c3c;margin:0'>Estación VICENTE VALDES</h3><p><strong>Línea:</strong> Linea 4</p></div></div>`)[0];
+                popup_8990df33d8bb021e93f227837157834f.setContent(html_c4882df01a9112eee37185e2ffcc00e2);
+            
+        
+
+        marker_a639fd5d39993271d4878f2e7b286703.bindPopup(popup_8990df33d8bb021e93f227837157834f)
+        ;
+
+        
+    
+    
+            marker_a639fd5d39993271d4878f2e7b286703.bindTooltip(
+                `<div>
+                     Estación VICENTE VALDES
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a639fd5d39993271d4878f2e7b286703.setIcon(div_icon_3c398b2f50dc6a18f962d2c89f58bba3);
+            
+    
+            var marker_d10c723abdcc2cbd05223e4adaafca2d = L.marker(
+                [-33.520093954844874, -70.59586110124692],
+                {
+}
+            ).addTo(feature_group_f37784d819a7f968bfdd1ab4a0511f5e);
+        
+    
+            var div_icon_a1cdada35a20939b5b30b445599c3820 = L.divIcon({
+  "html": "\u003cdiv style=\"background-color:#e74c3c;width:25px;height:25px;border-radius:50%;border:3px solid white;box-shadow:0 2px 5px rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center;color:white;font-weight:bold;font-size:12px;\"\u003eM\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_f859ee7ce37fe4807f2833234b8eaa68 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5331a6ae3ff8bc9e55e0ae3c21a23c17 = $(`<div id="html_5331a6ae3ff8bc9e55e0ae3c21a23c17" style="width: 100.0%; height: 100.0%;"><div style='font-family: Arial'><h3 style='color:#e74c3c;margin:0'>Estación VICUÑA MACKENNA</h3><p><strong>Línea:</strong> Linea 4</p></div></div>`)[0];
+                popup_f859ee7ce37fe4807f2833234b8eaa68.setContent(html_5331a6ae3ff8bc9e55e0ae3c21a23c17);
+            
+        
+
+        marker_d10c723abdcc2cbd05223e4adaafca2d.bindPopup(popup_f859ee7ce37fe4807f2833234b8eaa68)
+        ;
+
+        
+    
+    
+            marker_d10c723abdcc2cbd05223e4adaafca2d.bindTooltip(
+                `<div>
+                     Estación VICUÑA MACKENNA
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d10c723abdcc2cbd05223e4adaafca2d.setIcon(div_icon_a1cdada35a20939b5b30b445599c3820);
+            
+    
+            var marker_172edb4b6f9ec212fef55af61d0e332a = L.marker(
+                [-33.42655058298339, -70.59129247210223],
+                {
+}
+            ).addTo(feature_group_f37784d819a7f968bfdd1ab4a0511f5e);
+        
+    
+            var div_icon_f3fd3f254d2d04154ea201955c5630f8 = L.divIcon({
+  "html": "\u003cdiv style=\"background-color:#e74c3c;width:25px;height:25px;border-radius:50%;border:3px solid white;box-shadow:0 2px 5px rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center;color:white;font-weight:bold;font-size:12px;\"\u003eM\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_0ef3d2ae8fe32a434d251465610dbaa2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bf2b4ad387e1a9d6472a0cf9eae0c0bf = $(`<div id="html_bf2b4ad387e1a9d6472a0cf9eae0c0bf" style="width: 100.0%; height: 100.0%;"><div style='font-family: Arial'><h3 style='color:#e74c3c;margin:0'>Estación CRISTOBAL COLON</h3><p><strong>Línea:</strong> Linea 4</p></div></div>`)[0];
+                popup_0ef3d2ae8fe32a434d251465610dbaa2.setContent(html_bf2b4ad387e1a9d6472a0cf9eae0c0bf);
+            
+        
+
+        marker_172edb4b6f9ec212fef55af61d0e332a.bindPopup(popup_0ef3d2ae8fe32a434d251465610dbaa2)
+        ;
+
+        
+    
+    
+            marker_172edb4b6f9ec212fef55af61d0e332a.bindTooltip(
+                `<div>
+                     Estación CRISTOBAL COLON
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_172edb4b6f9ec212fef55af61d0e332a.setIcon(div_icon_f3fd3f254d2d04154ea201955c5630f8);
+            
+    
+            var marker_63e7c2938d81cf93d4f302d8baa00990 = L.marker(
+                [-33.418950249106416, -70.60274118321016],
+                {
+}
+            ).addTo(feature_group_f37784d819a7f968bfdd1ab4a0511f5e);
+        
+    
+            var div_icon_7b95fcdde46e0cb9373d5c6b7f50434e = L.divIcon({
+  "html": "\u003cdiv style=\"background-color:#e74c3c;width:25px;height:25px;border-radius:50%;border:3px solid white;box-shadow:0 2px 5px rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center;color:white;font-weight:bold;font-size:12px;\"\u003eM\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_23ed26394f16afe1acf7faa774475ef3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_dc292ba5242a49378f607216bae88836 = $(`<div id="html_dc292ba5242a49378f607216bae88836" style="width: 100.0%; height: 100.0%;"><div style='font-family: Arial'><h3 style='color:#e74c3c;margin:0'>Estación TOBALABA L1</h3><p><strong>Línea:</strong> Linea 1</p></div></div>`)[0];
+                popup_23ed26394f16afe1acf7faa774475ef3.setContent(html_dc292ba5242a49378f607216bae88836);
+            
+        
+
+        marker_63e7c2938d81cf93d4f302d8baa00990.bindPopup(popup_23ed26394f16afe1acf7faa774475ef3)
+        ;
+
+        
+    
+    
+            marker_63e7c2938d81cf93d4f302d8baa00990.bindTooltip(
+                `<div>
+                     Estación TOBALABA L1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_63e7c2938d81cf93d4f302d8baa00990.setIcon(div_icon_7b95fcdde46e0cb9373d5c6b7f50434e);
+            
+    
+            feature_group_f37784d819a7f968bfdd1ab4a0511f5e.addTo(map_3b73d03de416f7ffb58c911154c72ea0);
+        
+    
+            var feature_group_35e6c4fdd7f02db489326778a025473e = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_5f678cdbd049306fa3a198c8daee41ad = L.marker(
+                [-33.62930675265769, -70.61456986542413],
+                {
+}
+            ).addTo(feature_group_35e6c4fdd7f02db489326778a025473e);
+        
+    
+            var div_icon_4b36702840869eec6c1054325a1248c0 = L.divIcon({
+  "html": "\u003cdiv style=\u0027background-color:#aec7e8;width:30px;height:30px;border-radius:50%;border:3px solid white;box-shadow:0 2px 5px rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center;color:white;font-weight:bold;font-size:14px;\u0027\u003e1\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_0c62638c4e8b007a6f1038fa62f8b4fd = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0513c9d473053f2dac9dd95928a06c96 = $(`<div id="html_0513c9d473053f2dac9dd95928a06c96" style="width: 100.0%; height: 100.0%;"><div style='font-family: Arial; max-width: 300px;'><h4 style='color:#aec7e8;margin:0'>🚌 Parada 1</h4><p><strong>Trabajador 765469081</strong> (ID 765469081)</p><p>Pasaje rio Quillen 01434, Puente Alto</p><p><strong>Metro objetivo:</strong> TOBALABA L1</p><p><strong>t(modelo ×1.55):</strong> 0.0 min</p></div></div>`)[0];
+                popup_0c62638c4e8b007a6f1038fa62f8b4fd.setContent(html_0513c9d473053f2dac9dd95928a06c96);
+            
+        
+
+        marker_5f678cdbd049306fa3a198c8daee41ad.bindPopup(popup_0c62638c4e8b007a6f1038fa62f8b4fd)
+        ;
+
+        
+    
+    
+            marker_5f678cdbd049306fa3a198c8daee41ad.bindTooltip(
+                `<div>
+                     🚌 Parada 1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5f678cdbd049306fa3a198c8daee41ad.setIcon(div_icon_4b36702840869eec6c1054325a1248c0);
+            
+    
+            var marker_89e52226df55c8615bf3e7f22474f540 = L.marker(
+                [-33.479041258658164, -70.55861160256535],
+                {
+}
+            ).addTo(feature_group_35e6c4fdd7f02db489326778a025473e);
+        
+    
+            var div_icon_661311570f63adb647891120f6571c0a = L.divIcon({
+  "html": "\u003cdiv style=\u0027background-color:#aec7e8;width:30px;height:30px;border-radius:50%;border:3px solid white;box-shadow:0 2px 5px rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center;color:white;font-weight:bold;font-size:14px;\u0027\u003e2\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_9a1802ec0534f34b0d7a4e0606131a94 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_503a06e4c2122190b0db7efdd5e8fb06 = $(`<div id="html_503a06e4c2122190b0db7efdd5e8fb06" style="width: 100.0%; height: 100.0%;"><div style='font-family: Arial; max-width: 300px;'><h4 style='color:#aec7e8;margin:0'>🚌 Parada 2</h4><p><strong>Trabajador 414918097</strong> (ID 414918097)</p><p>CERRO LA CAMPANA N-3302, PEÑALOLEN</p><p><strong>Metro objetivo:</strong> CRISTOBAL COLON</p><p><strong>t(modelo ×1.55):</strong> 41.1 min</p></div></div>`)[0];
+                popup_9a1802ec0534f34b0d7a4e0606131a94.setContent(html_503a06e4c2122190b0db7efdd5e8fb06);
+            
+        
+
+        marker_89e52226df55c8615bf3e7f22474f540.bindPopup(popup_9a1802ec0534f34b0d7a4e0606131a94)
+        ;
+
+        
+    
+    
+            marker_89e52226df55c8615bf3e7f22474f540.bindTooltip(
+                `<div>
+                     🚌 Parada 2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_89e52226df55c8615bf3e7f22474f540.setIcon(div_icon_661311570f63adb647891120f6571c0a);
+            
+    
+            var poly_line_2a72743cfe2fd79c47f19d9d9b243212 = L.polyline(
+                [[-33.6293423, -70.6146638], [-33.6293046, -70.6143835], [-33.6292937, -70.6143024], [-33.6292586, -70.6140412], [-33.6292443, -70.6139349], [-33.6292152, -70.6137182], [-33.6291956, -70.6135721], [-33.6291706, -70.613386], [-33.6291496, -70.6132297], [-33.6291046, -70.6128946], [-33.6290582, -70.61255], [-33.6290015, -70.6121277], [-33.629015, -70.6119841], [-33.6290611, -70.6113786], [-33.6290669, -70.6108322], [-33.6290679, -70.6103172], [-33.629045, -70.6100195], [-33.628959, -70.6095179], [-33.628784, -70.6084967], [-33.6286547, -70.6077277], [-33.6286184, -70.607494], [-33.6286139, -70.6074203], [-33.6280327, -70.6073398], [-33.6275285, -70.6072647], [-33.6270014, -70.6073096], [-33.626863, -70.6073311], [-33.6266854, -70.6073539], [-33.6265592, -70.6073747], [-33.6264168, -70.6073928], [-33.6261466, -70.6074116], [-33.6258346, -70.607383], [-33.6257669, -70.6070173], [-33.6257321, -70.6067012], [-33.6257027, -70.6063827], [-33.625673, -70.6060608], [-33.6256426, -70.6057316], [-33.6256145, -70.6054328], [-33.6252007, -70.6052933], [-33.6249445, -70.605247], [-33.6246692, -70.6052464], [-33.6243627, -70.605322], [-33.6236156, -70.6054804], [-33.6226066, -70.6047079], [-33.6216841, -70.6034938], [-33.621353, -70.6033936], [-33.621032, -70.6033004], [-33.6207031, -70.60323], [-33.6200252, -70.6032595], [-33.6199359, -70.6032749], [-33.6192034, -70.6033435], [-33.6185935, -70.6033458], [-33.6156884, -70.6033561], [-33.6156735, -70.6032146], [-33.6156273, -70.6027758], [-33.6156058, -70.602534], [-33.6156501, -70.6021296], [-33.6157171, -70.6017625], [-33.6153598, -70.5988312], [-33.6155038, -70.5984879], [-33.6158143, -70.5996288], [-33.6157518, -70.5999088], [-33.6154511, -70.6000489], [-33.6151964, -70.6001719], [-33.6133829, -70.6011808], [-33.6128061, -70.6015302], [-33.6124721, -70.6017166], [-33.6121385, -70.6018878], [-33.6118035, -70.6020511], [-33.6113949, -70.6022295], [-33.608138, -70.6030034], [-33.6065306, -70.6032855], [-33.6063725, -70.6033145], [-33.6062862, -70.6033297], [-33.6060633, -70.6033715], [-33.6058505, -70.6034151], [-33.5979413, -70.6064221], [-33.59426, -70.6071566], [-33.5939092, -70.6072095], [-33.5936226, -70.6072527], [-33.5933359, -70.6072991], [-33.593052, -70.6073452], [-33.592399, -70.6074534], [-33.591643, -70.6076159], [-33.5894528, -70.6084424], [-33.5871713, -70.6093807], [-33.5852634, -70.6095748], [-33.5847661, -70.6096034], [-33.5843475, -70.6096452], [-33.5839861, -70.6096995], [-33.5833971, -70.6097956], [-33.5831248, -70.6098397], [-33.5830395, -70.6098564], [-33.5827632, -70.6099154], [-33.5823565, -70.6100059], [-33.5808661, -70.6103875], [-33.5697855, -70.6125236], [-33.5696164, -70.6123288], [-33.5695212, -70.6114532], [-33.5694252, -70.6114678], [-33.5690077, -70.6115312], [-33.5685972, -70.6115935], [-33.5681876, -70.6116557], [-33.5677758, -70.6117183], [-33.5673567, -70.6117819], [-33.5669438, -70.6118446], [-33.566501, -70.6119118], [-33.5660582, -70.6119791], [-33.5656534, -70.6120406], [-33.5652421, -70.612103], [-33.564833, -70.6121652], [-33.5647094, -70.6121839], [-33.5644161, -70.6122279], [-33.5639428, -70.6122989], [-33.5638447, -70.611367], [-33.5638207, -70.6111393], [-33.5637111, -70.6101915], [-33.5632459, -70.6102584], [-33.563144, -70.6102732], [-33.5628224, -70.61032], [-33.562413, -70.6103796], [-33.561972, -70.6104439], [-33.5614211, -70.6106054], [-33.5610183, -70.6107222], [-33.5606134, -70.6108378], [-33.5605098, -70.6108674], [-33.5602053, -70.6109543], [-33.5597391, -70.6110875], [-33.5592744, -70.6112167], [-33.5588525, -70.6113372], [-33.5587728, -70.61136], [-33.5584474, -70.6114529], [-33.5581033, -70.6115512], [-33.5580303, -70.611572], [-33.5577757, -70.6116447], [-33.5576096, -70.6116912], [-33.5574615, -70.6117345], [-33.5572027, -70.6118084], [-33.5571505, -70.6118233], [-33.5567937, -70.6119252], [-33.5567303, -70.6119433], [-33.5563633, -70.6120481], [-33.5563201, -70.6120604], [-33.5556261, -70.6122583], [-33.5550113, -70.6117102], [-33.55473, -70.6114613], [-33.554431, -70.6111968], [-33.5542953, -70.6110753], [-33.5540458, -70.6108619], [-33.5533418, -70.6108261], [-33.5531054, -70.6108177], [-33.5520663, -70.6107807], [-33.55168, -70.6107669], [-33.5513286, -70.6107544], [-33.5511668, -70.6107487], [-33.5509753, -70.6107419], [-33.550534, -70.6107262], [-33.5501056, -70.6107116], [-33.5496945, -70.6106977], [-33.5492831, -70.6107025], [-33.54829, -70.6108885], [-33.547866, -70.6108737], [-33.546644, -70.610831], [-33.5466493, -70.6106353], [-33.5466526, -70.6105425], [-33.5451002, -70.6104866], [-33.5433201, -70.6104205], [-33.539453, -70.6102775], [-33.538865, -70.6101467], [-33.5379912, -70.6095992], [-33.5377338, -70.6094386], [-33.5375519, -70.6093495], [-33.5373952, -70.6092966], [-33.5369703, -70.6090739], [-33.5367087, -70.6089044], [-33.536583, -70.6088231], [-33.5356708, -70.6082243], [-33.5353134, -70.6079863], [-33.5352231, -70.6079259], [-33.5346547, -70.607547], [-33.5342701, -70.6072821], [-33.5338889, -70.6070327], [-33.5328588, -70.6063769], [-33.5324997, -70.6061404], [-33.5318587, -70.6057183], [-33.5313343, -70.6053709], [-33.5311683, -70.6052607], [-33.5302611, -70.6046683], [-33.5298429, -70.6044022], [-33.5294022, -70.6041178], [-33.5287985, -70.6037436], [-33.5285064, -70.6035318], [-33.5281674, -70.6033098], [-33.5281339, -70.6032873], [-33.5281146, -70.6032737], [-33.5277813, -70.6030459], [-33.5270786, -70.6025893], [-33.5266537, -70.6023094], [-33.5255116, -70.6015229], [-33.5253797, -70.6014329], [-33.5250124, -70.6011144], [-33.5245655, -70.6006252], [-33.5240587, -70.5998932], [-33.5239274, -70.5996875], [-33.5233533, -70.5987976], [-33.5231005, -70.5984834], [-33.5230559, -70.5984369], [-33.5228848, -70.5982562], [-33.522811, -70.5981787], [-33.5225712, -70.5979581], [-33.5223285, -70.5977591], [-33.5220933, -70.5975819], [-33.5219641, -70.5974914], [-33.5217221, -70.5973472], [-33.5209786, -70.5967947], [-33.5199035, -70.5959646], [-33.5196715, -70.5957795], [-33.5195569, -70.595691], [-33.5192433, -70.5954516], [-33.5186337, -70.594995], [-33.51827, -70.5947267], [-33.5179496, -70.5945023], [-33.5178439, -70.5944191], [-33.5171027, -70.5938329], [-33.5168126, -70.5935854], [-33.5157219, -70.5926654], [-33.515051, -70.5920975], [-33.5148352, -70.5918849], [-33.5147079, -70.5917672], [-33.5141425, -70.5912318], [-33.5111078, -70.5900121], [-33.5107863, -70.5899625], [-33.510684, -70.5899443], [-33.5104492, -70.5899081], [-33.5103116, -70.5898877], [-33.5091219, -70.5896164], [-33.5086332, -70.589538], [-33.5084029, -70.5895112], [-33.5083348, -70.5895019], [-33.5081603, -70.5894854], [-33.5077933, -70.5894552], [-33.5071663, -70.5894005], [-33.5068658, -70.5893749], [-33.506726, -70.5893632], [-33.5064593, -70.589335], [-33.5056742, -70.5891873], [-33.5041915, -70.588624], [-33.502727, -70.587982], [-33.5019466, -70.5876799], [-33.5007891, -70.5872031], [-33.5004503, -70.5870436], [-33.4997921, -70.5866713], [-33.4995066, -70.5864962], [-33.4985724, -70.5859057], [-33.4981302, -70.5856043], [-33.4979855, -70.5855079], [-33.4974128, -70.58517], [-33.4963376, -70.5845223], [-33.4961211, -70.5843841], [-33.4958706, -70.5842252], [-33.4951957, -70.5838021], [-33.4931138, -70.5825099], [-33.4929337, -70.5823912], [-33.4922718, -70.5819737], [-33.4917035, -70.5816195], [-33.4910072, -70.5811809], [-33.4900344, -70.5801995], [-33.4897646, -70.5796031], [-33.489334, -70.5792906], [-33.4881277, -70.5798492], [-33.4867109, -70.5798442], [-33.4866552, -70.5798332], [-33.4858682, -70.579677], [-33.4858014, -70.5796628], [-33.4848114, -70.5794764], [-33.4843517, -70.5793785], [-33.4838573, -70.5792584], [-33.480694, -70.5785946], [-33.4804266, -70.5781748], [-33.4803176, -70.5775204], [-33.4803337, -70.5774674], [-33.4804885, -70.5769593], [-33.4806392, -70.5764649], [-33.4808958, -70.5756296], [-33.4804827, -70.5754347], [-33.4801315, -70.575269], [-33.4797508, -70.5750905], [-33.4793731, -70.5749126], [-33.4790161, -70.5747445], [-33.4786398, -70.5745673], [-33.478274, -70.5743951], [-33.4779187, -70.5742278], [-33.4775472, -70.5740529], [-33.4771692, -70.5738749], [-33.4770272, -70.573808], [-33.476801, -70.5737015], [-33.4764487, -70.5735356], [-33.4762387, -70.5734372], [-33.4765734, -70.5718887], [-33.4766813, -70.5713899], [-33.4767775, -70.5709452], [-33.4768754, -70.5704922], [-33.4769733, -70.5700392], [-33.4769867, -70.569977], [-33.4770709, -70.5695876], [-33.4771709, -70.5691253], [-33.4772724, -70.5686556], [-33.4773779, -70.5681677], [-33.4776223, -70.5676988], [-33.4777714, -70.567158], [-33.4778451, -70.5668235], [-33.4780702, -70.5657898], [-33.4782204, -70.5651298], [-33.4784787, -70.5639648], [-33.4785637, -70.5636062], [-33.4786518, -70.5632377], [-33.4787492, -70.5627915], [-33.4788449, -70.5623163], [-33.4788664, -70.5622143], [-33.479423, -70.5601927], [-33.4797302, -70.5587629], [-33.4796524, -70.558628], [-33.4796162, -70.5587891], [-33.4787085, -70.5585229], [-33.4796162, -70.5587891], [-33.479542, -70.5591515], [-33.4794664, -70.5595133], [-33.4793845, -70.5598956], [-33.479326, -70.5601643], [-33.4787494, -70.5622975], [-33.4786789, -70.5626246], [-33.4786543, -70.5627537], [-33.478388, -70.5639389], [-33.4782528, -70.5645596], [-33.4781439, -70.5651116], [-33.4779996, -70.5657681], [-33.4771854, -70.565409], [-33.4766336, -70.5651508], [-33.4761472, -70.5652394], [-33.4760946, -70.5652814], [-33.4757221, -70.5655556], [-33.4753648, -70.5658185], [-33.4750342, -70.5660621], [-33.474703, -70.5663059], [-33.4743712, -70.5665501], [-33.4740435, -70.5667914], [-33.4736778, -70.5670607], [-33.4732989, -70.5673397], [-33.4729593, -70.5675897], [-33.4726221, -70.567838], [-33.4722837, -70.5680871], [-33.4719478, -70.5683343], [-33.4715905, -70.5685974], [-33.4713338, -70.5687864], [-33.4708393, -70.5686255], [-33.4707698, -70.5685986], [-33.4707149, -70.5685778], [-33.4706487, -70.568553], [-33.4695918, -70.5681595], [-33.4692004, -70.5680137], [-33.4682497, -70.5676598], [-33.4678072, -70.567495], [-33.4673107, -70.5673052], [-33.4666658, -70.5670586], [-33.4662917, -70.5669156], [-33.4655885, -70.5666468], [-33.465454, -70.5665953], [-33.4646188, -70.5662761], [-33.4643437, -70.5661709], [-33.4643096, -70.5662958], [-33.4641522, -70.5669074], [-33.4640484, -70.567318], [-33.4637985, -70.5683058], [-33.4631238, -70.5680813], [-33.4627905, -70.5679704], [-33.4623305, -70.5678176], [-33.461863, -70.5676622], [-33.4608057, -70.5673109], [-33.4606093, -70.5678457], [-33.4604808, -70.5681955], [-33.4600963, -70.569203], [-33.4599269, -70.569653], [-33.4598815, -70.5697731], [-33.4590326, -70.5721859], [-33.4577581, -70.5717275], [-33.4571085, -70.5715589], [-33.4564738, -70.5713916], [-33.4561011, -70.5712975], [-33.4555335, -70.5712204], [-33.4549088, -70.5710367], [-33.454396, -70.5709024], [-33.4535975, -70.570723], [-33.4534339, -70.5706914], [-33.4520811, -70.5707621], [-33.4517491, -70.5708144], [-33.4516721, -70.5708282], [-33.4509252, -70.5710146], [-33.4498977, -70.5712136], [-33.4493395, -70.5712954], [-33.4485647, -70.5714243], [-33.4481996, -70.5714855], [-33.4480156, -70.5715139], [-33.4478707, -70.5715403], [-33.4470612, -70.5716822], [-33.4463123, -70.5718176], [-33.4458914, -70.5718884], [-33.4451621, -70.5720191], [-33.4445296, -70.5721363], [-33.4438488, -70.5722561], [-33.4425075, -70.5724857], [-33.4414147, -70.5726694], [-33.4402907, -70.5728714], [-33.4398029, -70.5729158], [-33.4390365, -70.5730357], [-33.4383964, -70.5732007], [-33.4378977, -70.5734063], [-33.4378657, -70.5736488], [-33.4377755, -70.5740361], [-33.4371139, -70.5754858], [-33.4367556, -70.5765589], [-33.4367495, -70.5765788], [-33.4365916, -70.5770934], [-33.4365194, -70.5773612], [-33.4364727, -70.5775346], [-33.4364284, -70.5777079], [-33.436301, -70.5781834], [-33.4356308, -70.5795864], [-33.4350504, -70.5806665], [-33.4345316, -70.5815467], [-33.4342502, -70.5820074], [-33.4341321, -70.5821918], [-33.433985, -70.5824077], [-33.4336613, -70.5828947], [-33.4331789, -70.583524], [-33.4328302, -70.5839374], [-33.4318348, -70.5846741], [-33.4317461, -70.5847391], [-33.4306832, -70.5858211], [-33.4280432, -70.5888839], [-33.427098, -70.5901237], [-33.4268763, -70.5904102], [-33.4266304, -70.5907176], [-33.4263027, -70.591133], [-33.4262023, -70.591265], [-33.4256664, -70.5919665], [-33.4251245, -70.5926674], [-33.4249143, -70.5929426], [-33.4247142, -70.593195], [-33.4245672, -70.5933933], [-33.4239634, -70.5941622], [-33.4232063, -70.5950979], [-33.4224162, -70.5960583], [-33.421591, -70.5970848], [-33.4206039, -70.5984438], [-33.4200533, -70.5990989], [-33.4199327, -70.5992566], [-33.419455, -70.5999765], [-33.4197754, -70.6009716], [-33.4202207, -70.6008127], [-33.4205507, -70.6019584], [-33.4187313, -70.6027613]],
+                {"bubblingMouseEvents": true, "color": "#aec7e8", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#aec7e8", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(feature_group_35e6c4fdd7f02db489326778a025473e);
+        
+    
+            poly_line_2a72743cfe2fd79c47f19d9d9b243212.bindTooltip(
+                `<div>
+                     🚌 Ruta V481
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_2a72743cfe2fd79c47f19d9d9b243212.setText(
+                " \u25b6   \u25b6   \u25b6   \u25b6 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "#aec7e8",
+  "font-weight": "bold",
+  "font-size": "11",
+},
+}
+            );
+        
+    
+            var marker_02bfb296d95b12aa907d5cd2e2cda476 = L.marker(
+                [-33.42655058298339, -70.59129247210223],
+                {
+}
+            ).addTo(feature_group_35e6c4fdd7f02db489326778a025473e);
+        
+    
+            var div_icon_c55aed55aab25c304b1056b24964654a = L.divIcon({
+  "html": "\u003cdiv style=\u0027background-color:#34495e;width:30px;height:30px;border-radius:50%;border:3px solid white;box-shadow:0 2px 5px rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center;color:white;font-weight:bold;font-size:14px;\u0027\u003eM1\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_a4eff49c7a055404ec66b7b3772476b1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_37abcb23f907a6daf096fa4e7df4b51a = $(`<div id="html_37abcb23f907a6daf096fa4e7df4b51a" style="width: 100.0%; height: 100.0%;"><div style='font-family: Arial'><h4 style='margin:0;color:#34495e'>Visita de metro</h4><p><strong>Estación:</strong> CRISTOBAL COLON</p><p><strong>t(modelo ×1.55):</strong> 55.9 min</p></div></div>`)[0];
+                popup_a4eff49c7a055404ec66b7b3772476b1.setContent(html_37abcb23f907a6daf096fa4e7df4b51a);
+            
+        
+
+        marker_02bfb296d95b12aa907d5cd2e2cda476.bindPopup(popup_a4eff49c7a055404ec66b7b3772476b1)
+        ;
+
+        
+    
+    
+            marker_02bfb296d95b12aa907d5cd2e2cda476.bindTooltip(
+                `<div>
+                     Metro CRISTOBAL COLON
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_02bfb296d95b12aa907d5cd2e2cda476.setIcon(div_icon_c55aed55aab25c304b1056b24964654a);
+            
+    
+            var marker_6d2109bb2216d75b21a4dfcd6a5c25fb = L.marker(
+                [-33.418950249106416, -70.60274118321016],
+                {
+}
+            ).addTo(feature_group_35e6c4fdd7f02db489326778a025473e);
+        
+    
+            var div_icon_af7610139f27071f42b36c4952bc1603 = L.divIcon({
+  "html": "\u003cdiv style=\u0027background-color:#27ae60;width:35px;height:35px;border-radius:50%;border:3px solid white;box-shadow:0 2px 5px rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center;color:white;font-weight:bold;font-size:14px;\u0027\u003e\ud83c\udfc1\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_55647faac2801032f0ed70d755ed7ded = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_076aabb73b6e60552b9cfdf4adc7eca3 = $(`<div id="html_076aabb73b6e60552b9cfdf4adc7eca3" style="width: 100.0%; height: 100.0%;"><div style='font-family: Arial'><h4 style='margin:0;color:#27ae60'>Metro final</h4><p><strong>Estación:</strong> TOBALABA L1</p><p><strong>t(modelo ×1.55):</strong> 58.8 min</p></div></div>`)[0];
+                popup_55647faac2801032f0ed70d755ed7ded.setContent(html_076aabb73b6e60552b9cfdf4adc7eca3);
+            
+        
+
+        marker_6d2109bb2216d75b21a4dfcd6a5c25fb.bindPopup(popup_55647faac2801032f0ed70d755ed7ded)
+        ;
+
+        
+    
+    
+            marker_6d2109bb2216d75b21a4dfcd6a5c25fb.bindTooltip(
+                `<div>
+                     Final TOBALABA L1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6d2109bb2216d75b21a4dfcd6a5c25fb.setIcon(div_icon_af7610139f27071f42b36c4952bc1603);
+            
+    
+            feature_group_35e6c4fdd7f02db489326778a025473e.addTo(map_3b73d03de416f7ffb58c911154c72ea0);
+        
+    
+            var layer_control_6d523642d3b370eb8d62f91bfcdff113_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_b34a8ee967643cc1017b82c0f5c0d90c,
+                    "Ruta V481" : tile_layer_4e8eae304aeb88a6eed55f63e7fd0497,
+                },
+                overlays :  {
+                    "Estaciones de Metro" : feature_group_f37784d819a7f968bfdd1ab4a0511f5e,
+                    "\ud83d\ude8c V481 (Mediano)" : feature_group_35e6c4fdd7f02db489326778a025473e,
+                },
+            };
+            let layer_control_6d523642d3b370eb8d62f91bfcdff113 = L.control.layers(
+                layer_control_6d523642d3b370eb8d62f91bfcdff113_layers.base_layers,
+                layer_control_6d523642d3b370eb8d62f91bfcdff113_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_3b73d03de416f7ffb58c911154c72ea0);
+
+        
+    
+            var tile_layer_fc9b5a452f55fd1f702497ba2a6cfb47 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detect_retina": false, "max_native_zoom": 19, "max_zoom": 19, "min_zoom": 0, "no_wrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+            var mini_map_c298aee5473321d16ea67ec3aff43a23 = new L.Control.MiniMap(
+                tile_layer_fc9b5a452f55fd1f702497ba2a6cfb47,
+                {
+  "position": "bottomright",
+  "width": 150,
+  "height": 150,
+  "collapsedWidth": 25,
+  "collapsedHeight": 25,
+  "zoomLevelOffset": -5,
+  "centerFixed": false,
+  "zoomAnimation": false,
+  "toggleDisplay": true,
+  "autoToggleDisplay": false,
+  "minimized": false,
+}
+            );
+            map_3b73d03de416f7ffb58c911154c72ea0.addControl(mini_map_c298aee5473321d16ea67ec3aff43a23);
+        
+</script>
+</html>
